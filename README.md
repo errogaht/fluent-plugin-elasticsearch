@@ -1091,11 +1091,11 @@ Advanced users can increase its capacity, but normal users should follow default
 
 If you want to increase it and forcibly retrying bulk request, please consider to change `unrecoverable_error_types` parameter from default value.
 
-Change default value of `thread_pool.bulk.queue_size` in elasticsearch.yml:
+Change default value of `thread_pool.write.queue_size` in elasticsearch.yml:
 e.g.)
 
 ```yaml
-thread_pool.bulk.queue_size: 1000
+thread_pool.write.queue_size: 1000
 ```
 
 Then, remove `es_rejected_execution_exception` from `unrecoverable_error_types` parameter:
